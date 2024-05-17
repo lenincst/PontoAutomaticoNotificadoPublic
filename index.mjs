@@ -87,7 +87,7 @@ async function runScript() {
 
     await sleep(10000);
 
-    // Clica no botão ‘Bater Ponto’ após utilizar a última localização
+     //Clica no botão 'Bater Ponto' após utilizar a última localização
     await page.evaluate(() => {
       var xpath = "//button[contains(@class, 'pm-button pm-primary')]//span[contains(text(), 'Bater ponto')]";
       var elemento = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -96,7 +96,7 @@ async function runScript() {
     }
     });
 
-    await sleep(10000); // Espera 10 segundos
+    await sleep(5000); // Espera 10 segundos
 
     await browser.close();
 
@@ -109,7 +109,9 @@ async function runScript() {
 }
 
 // Usado para testes
-//cron.schedule('51 19 * * *', runScript);
+cron.schedule('45 13 * * *', runScript);
 
-// Agendar a tarefa para ser executada às 07:40, 12:00, 13:00 e 18:40 todos os dias
-cron.schedule('40 7,12,13,18 * * 1-5', runScript);
+//Agendar a tarefa para ser executada às 07:40, 12:00, 13:00 e 18:40 todos os dias
+//cron.schedule('00 8,12,13,18 * * 1-5', runScript);
+
+
