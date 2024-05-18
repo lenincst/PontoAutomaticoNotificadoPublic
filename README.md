@@ -20,6 +20,10 @@ O script depende das seguintes bibliotecas:
 
 3. Navegue até o diretório do projeto e instale as dependências com o comando `npm install`.
 
+   - `npm install puppeteer`
+   - `npm install node-cron`
+   - `npm install node-fetch`
+
 ## Configuração
 
 1. No diretório raiz do projeto, você encontrará um arquivo chamado `credenciais.mjs`. Este arquivo exporta um objeto com as seguintes propriedades:
